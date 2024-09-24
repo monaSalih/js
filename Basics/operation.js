@@ -32,38 +32,39 @@
 // console.log(inc_val,inc_val2);
 
 // logical operation
-let val1=4 > 5;
-console.log(val1 ,">");
+// let val1=4 > 5;
+// console.log(val1 ,">");
 
-let val2=10 < 15;
-console.log(val2, "<");
+// let val2=10 < 15;
+// console.log(val2, "<");
 
-let val3=4 != 5;
-console.log(val3 ,"!=");
-
-
-let val4=4 == "4";
-console.log(val4 ,"==");
-
-let val5=4 === '5'; 
-console.log(val5 ,"===");
-
-let val6 = 4 != "4"; 
-console.log(val6  ,"!=");
-
-let val60 = 4 !== "4"; 
-console.log(val60  ,"!==");
-
-// And or not
-
-let val7= 1 < 4 && 2 === 5 ; //t && f
-console.log(val7, "and");
-
-let val8= 1 < 4 || 2 === 5 ; //t || f
-console.log(val8, "or");
+// let val3=4 != 5;
+// console.log(val3 ,"!=");
 
 
-let val9= !(1 < 4) ; //t || f
-console.log(val9, 'test "not"');
+// let val4=4 == "4";
+// console.log(val4 ,"==");
+
+// let val5=4 === '5'; 
+// console.log(val5 ,"===");
+
+// let val6 = 4 != "4"; 
+// console.log(val6  ,"!=");
+
+// let val60 = 4 !== "4"; 
+// console.log(val60  ,"!==");
+
+// // And or not
+
+// let val7= 1 < 4 && 2 === 5 ; //t && f
+// console.log(val7, "and");
+
+// let val8= 1 < 4 || 2 === 5 ; //t || f
+// console.log(val8, "or");
+
+
+// let val9= !(1 < 4) ; //t || f
+// console.log(val9, 'test "not"');
+
 
 
