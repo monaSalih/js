@@ -6,7 +6,7 @@ formEmployee.addEventListener('submit',addEmployee);
 
 // declare array of object
 let employeeArr=[]
-
+// read data from form
 
 function addEmployee(event){
     event.preventDefault();
@@ -23,15 +23,20 @@ function addEmployee(event){
     
    new Employee(name, email, depWork);//hoisting
 }
-
+// ad new employee
 function Employee(nameEmp, emailEmp, empDep){
     this.employeeName=nameEmp;
     this.employeeEmail= emailEmp;
     this.employeeDep=empDep;
+    this.empSalary=salaryMount(260, 500)
 
     employeeArr.push(this);
     console.log(employeeArr, "employe array result");
     
     }
 
+    // calculate salary
+    function salaryMount(min, max) {
+        return Math.floor(Math.random() * (max - min) + min); 
+      }
 
