@@ -29,6 +29,8 @@ function addEmployee(event){
     
    new Employee(name, email, depWork);//hoisting
     renderInfo()
+    employeeIntoLocalStorage()
+
 
 }
 // ad new employee
@@ -40,7 +42,6 @@ function Employee(nameEmp, emailEmp, empDep){
 
     employeeArr.push(this);
     console.log(employeeArr, "employe array result");
-    
     }
 
     // calculate salary
@@ -108,7 +109,23 @@ function footerRender(sum){
 
     let tdFo=document.createElement('td');
     trFo.appendChild(tdFo);
-    tdFo.textContent=sum
+    tdFo.textContent=sum;
+    }
+
+
+function employeeIntoLocalStorage(){
+    let empData=JSON.stringify(employeeArr);
+    localStorage.setItem("localData",empData);
+}
+
+function employeeOutLocalStorage(){
+    let dataEmp=localStorage.getItem("localData");
+    let empLoyeeData= JSON.parse(dataEmp);
+      if (dataEmp !== null){  for (let i = 0; i < empLoyeeData.length; i++) {
+            new Employee(empLoyeeData[i].employeeName, empLoyeeData[i].employeeEmail,  empLoyeeData[i].employeeDep, empLoyeeData[i].empSalary);     
+        }}
+    renderInfo()
 
 
 }
+employeeOutLocalStorage()
