@@ -60,7 +60,26 @@ function creatHeader(){
     trEle.appendChild(thEl2);
     thEl2.textContent="Email";
 
-    
+    let thEl3=document.createElement('th');
+    trEle.appendChild(thEl3);
+    thEl3.textContent="Department";
 
+    let thEl4=document.createElement('th');
+    trEle.appendChild(thEl4);
+    thEl4.textContent="Salary";
+}
 
+creatHeader()
+
+function renderInfo(){
+    let trBody=document.createElement("tr");
+    taBody.appendChild(trBody);
+    for (let i = 0; i < employeeArr.length; i++) {
+
+       let tdEl1=document.createElement('td');
+       trBody.appendChild(tdEl1);
+       tdEl1.textContent=employeeArr[i].employeeName;
+
+        
+    }
 }
