@@ -6,6 +6,12 @@ formEmployee.addEventListener('submit',addEmployee);
 
 // declare array of object
 let employeeArr=[]
+
+// call table contant
+let taHead=document.getElementById("tableHed");
+let taBody=document.getElementById("tableBody");
+let taFooter=document.getElementById("tableFoot");
+
 // read data from form
 
 function addEmployee(event){
@@ -40,3 +46,21 @@ function Employee(nameEmp, emailEmp, empDep){
         return Math.floor(Math.random() * (max - min) + min); 
       }
 
+// built header 
+function creatHeader(){
+    let trEle=document.createElement('tr');
+    taHead.appendChild(trEle);
+
+    let thEl1=document.createElement('th');
+    trEle.appendChild(thEl1);
+    thEl1.textContent='Name';
+
+
+    let thEl2=document.createElement('th');
+    trEle.appendChild(thEl2);
+    thEl2.textContent="Email";
+
+    
+
+
+}
