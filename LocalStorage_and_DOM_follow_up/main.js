@@ -28,6 +28,8 @@ function addEmployee(event){
     // console.log(depWork, "select value");
     
    new Employee(name, email, depWork);//hoisting
+    renderInfo()
+
 }
 // ad new employee
 function Employee(nameEmp, emailEmp, empDep){
@@ -72,14 +74,24 @@ function creatHeader(){
 creatHeader()
 
 function renderInfo(){
-    let trBody=document.createElement("tr");
-    taBody.appendChild(trBody);
     for (let i = 0; i < employeeArr.length; i++) {
+        let trBody=document.createElement("tr");
+        taBody.appendChild(trBody);
 
        let tdEl1=document.createElement('td');
        trBody.appendChild(tdEl1);
        tdEl1.textContent=employeeArr[i].employeeName;
 
-        
+       let tdEl2=document.createElement('td');
+       trBody.appendChild(tdEl2);
+       tdEl2.textContent=employeeArr[i].employeeEmail;
+
+       let tdEl3=document.createElement('td');
+       trBody.appendChild(tdEl3);
+       tdEl3.textContent=employeeArr[i].employeeDep;
+
+       let tdEl4=document.createElement('td');
+       trBody.appendChild(tdEl4);
+       tdEl4.textContent=employeeArr[i].empSalary;        
     }
 }
