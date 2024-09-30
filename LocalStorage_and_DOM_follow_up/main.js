@@ -74,6 +74,8 @@ function creatHeader(){
 creatHeader()
 
 function renderInfo(){
+    taBody.innerHTML="";
+    let sum=0;
     for (let i = 0; i < employeeArr.length; i++) {
         let trBody=document.createElement("tr");
         taBody.appendChild(trBody);
@@ -93,5 +95,20 @@ function renderInfo(){
        let tdEl4=document.createElement('td');
        trBody.appendChild(tdEl4);
        tdEl4.textContent=employeeArr[i].empSalary;        
+
+       sum += employeeArr[i].empSalary;
     }
+    footerRender(sum)
+}
+
+function footerRender(sum){
+    taFooter.innerHTML="";
+    let trFo=document.createElement('tr');
+    taFooter.appendChild(trFo);
+
+    let tdFo=document.createElement('td');
+    trFo.appendChild(tdFo);
+    tdFo.textContent=sum
+
+
 }
